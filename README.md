@@ -30,7 +30,7 @@
 
 ## Installation :
 
-1. Clone the repository : $ git clone https://github.com/SnehalAShinde/Spring_Boot_Project.git <br>
+1. Clone the repository : $ git clone https://github.com/Spring_Boot_Project.git <br>
            OR
    Download the zip
 
@@ -62,27 +62,5 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver <br>
 spring.jpa.hibernate.ddl-auto=update <br>
 
 
-
-## Preview :
-
-#### Products 
-<img width="960" alt="Product Page" src="https://github.com/SnehalAShinde/Spring_Boot_Project/assets/126142130/afbd9286-8ca1-4708-9586-b6fed113cac3">
-
-
-
-#### Location 
-
-<img width="960" alt="Location page" src="https://github.com/SnehalAShinde/Spring_Boot_Project/assets/126142130/880e2a07-f155-4f22-baa6-ce7a5377a379">
-
-
-#### Login Page
-
-<img width="960" alt="Login Page" src="https://github.com/SnehalAShinde/Spring_Boot_Project/assets/126142130/29641b29-9181-4ac9-8037-5740baf269ff">
-
-
-#### AdminPanel
-
-
-<img width="960" alt="Admin Page" src="https://github.com/SnehalAShinde/Spring_Boot_Project/assets/126142130/54684ea2-e0f0-456f-9c35-d98b0a30e3e1">
 
 
