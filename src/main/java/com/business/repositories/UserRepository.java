@@ -1,10 +1,12 @@
 package com.business.repositories;
 
-import org.springframework.data.repository.CrudRepository;
-
 import com.business.entities.User;
 
-public interface UserRepository extends CrudRepository<User, Integer>
-{
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
+import java.util.Optional;
 
+public interface UserRepository extends JpaRepository<User, Integer> {
+    Optional<User> findByUserEmail(String userEmail);  // Correct field name
 }
+

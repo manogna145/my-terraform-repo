@@ -1,16 +1,76 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-	<meta charset="UTF-8" />
-	<title>Document</title>
-	<link rel="stylesheet" href="" th:href="@{/css/Product_Selected.css}" />
+    <meta charset="UTF-8" />
+    <title>Selected Products</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/Admin_page.css}" />
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f9f9f9;
+            padding: 20px;
+        }
+        .products {
+            width: 90%;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table th, table td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        table th {
+            background: #28a745;
+            color: white;
+        }
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
 </head>
+
 <body>
-	<div class="success">
-	<h1>PRODUCT  SUCCESSFULLY  SELECTED</h1>
-	<h3>We Will Send Your Product Immediately</h3>
-	<h3>Thank You For Visiting Our Shop</h3>
-	<h4>********</h4>
-	</div> 
+
+    <a class="back" th:href="@{/userlogin}"><i class="fas fa-arrow-left"></i> Back to Products</a>
+
+    <center>
+        <div class="products">
+            <h2>Selected Products</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Id</th>
+                        <th>Product Name</th>
+                        <th>Product Price</th>
+                        <th>Product Description</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr th:each="product : ${selectedProducts}">
+                        <td th:text="${product.pid}">1</td>
+                        <td th:text="${product.pname}">Name</td>
+                        <td th:text="${product.pprice}">Price</td>
+                        <td th:text="${product.pdescription}">Description</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </center>
+
 </body>
+
 </html>

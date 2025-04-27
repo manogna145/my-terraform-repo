@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>SS Beauty : Register</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<link rel="stylesheet" href="" th:href="@{/css/Navigation.css}" />
+	<link rel="stylesheet" href="" th:href="@{/css/Register.css}" />
+</head>
+
+<body>
+	<nav th:replace="~{Navigation::navbar()}">
+	</nav>
+
+	<div class="RegisterContainer">
+		<div class="registerForm">
+			<div class="content">
+				<h2>Create Your <span style="color:green;">Account</span></h2>
+
+				<form action="" th:action="@{/register}" method="post" class="form">
+					
+					<b>Full Name :</b>
+					<input type="text" name="fullname" placeholder="Enter your full name" required><br />
+
+					<b>Email :</b>
+					<input type="email" name="email" placeholder="Enter your email" required><br />
+
+					<b>Password :</b>
+					<input type="password" name="password" placeholder="Create password" required minlength="4" maxlength="8"><br />
+
+					<b>Confirm Password :</b>
+					<input type="password" name="confirmPassword" placeholder="Confirm password" required minlength="4" maxlength="8"><br />
+
+					<small style="color: red;" th:text="${error}"></small><br />
+					<small style="color: green;" th:text="${success}"></small><br />
+
+					<button type="submit" class="registerButton">Register</button><br />
+
+					<p>Already have an account? <a href="login.html" style="color: green;">Login Here</a></p>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

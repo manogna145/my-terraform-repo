@@ -1,27 +1,22 @@
-<!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.com">
-
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<meta charset="UTF-8" />
-	<title>Document</title>
-	<link rel="stylesheet" href="" th:href="@{/css/Add_User.css}" />
+    <title>Register User</title>
 </head>
-
 <body>
-	<a href="/services">Back to Services</a>
-	<div class="addUser">
-		<h3 style="color: red;">ADD NEW USER/CUSTOMER</h3>
-		<form action="" th:action="@{/addingUser}" method="post">
-			<label for="name">User_Name :</label>
-			<input type="text" name="userName" />
-			<label for="email" />User_Email :
-			<input type="email" name="userEmail" />
-			<label for="telephone">User_Number :</label>
-			<input type="tel" name="userNumber" />
-			<input type="hidden" name="userPassword" value="User@123" />
-		</form>
-		<button type="submit">Add_User</button>
-	</div>
-</body>
+    <h2>User Registration</h2>
+    <form action="/saveUser" method="post" th:object="${user}">
+        <label>Username:</label>
+        <input type="text" th:field="*{username}" required/><br><br>
 
+        <label>Password:</label>
+        <input type="password" th:field="*{password}" required/><br><br>
+
+        <!-- You can add other fields like email, phone etc. -->
+
+        <button type="submit">Register</button>
+    </form>
+
+    <a href="/login">Already have an account? Login</a>
+</body>
 </html>

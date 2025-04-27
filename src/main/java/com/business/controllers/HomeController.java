@@ -34,7 +34,7 @@ public class HomeController
 		return "About";
 	}
 
-	@GetMapping("/login")
+	@GetMapping("/homelogin")
 	public String login(Model model)
 	{
 		return "Login";
